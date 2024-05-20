@@ -14,6 +14,12 @@ class AnimalController extends Controller
         return $animals;
     }
 
+    function show(Animal $animal){
+        return response()->json([
+            'Animal' => $animal
+        ]);
+    }
+
     function store(Request $request){
         
         $animal = new Animal();

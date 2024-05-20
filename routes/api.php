@@ -22,6 +22,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::controller(AnimalController::class)->group(function(){
     Route::get('/animal', 'index')->name('animal.index');
+    Route::get('/animal/show/{animal}', 'show')->name('animal.show');
     Route::post('/animal', 'store')->name('animal.store');
     Route::put('/animal/{animal}', 'update')->name('animal.update');
     Route::delete('/animal/{animal}', 'destroy')->name('animal.destroy');
