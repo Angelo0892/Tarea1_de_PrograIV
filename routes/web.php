@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AnimalController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TestController;
 
@@ -27,7 +28,6 @@ Route::get('/test', function () {
 Route::get('/test2', function () {
     return "Hola esto es solo un mensaje como respuesta a la ruta";
 });
-
 
 Route::get('/demo', [TestController::class,'listadotest']);
 
